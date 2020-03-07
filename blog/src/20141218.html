@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>ものづくり全般に関するブログ</title>
+     <!--検索エンジンで表示されるサイトの説明-->
+    <meta name="description" content="「ものづくり」に関するちょっとした情報を発信するブログです。「つまみ食い」感覚で動画を眺めたいあなたに。私達が今一番知りたいこと・興味のあることばかりを取り上げてみました。" />
+    <!--検索エンジンで使われるキーワード-->
+    <meta name="keywords" content="ものづくり,プログラミング,マイコン,電子回路" />
+    <meta name="author" content="ynu" />
+    <!--スマホ対策-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
+	<link href="../css/blog_css.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>  
+     <h3>PICマイコン16F84Aを使ってエルチカ①　2014/12/18</h3>
+            <p class="note">ものすごく今さら感があったりしますが，ＰＩＣマイコンに挑戦しております．いつも使っているArduinoに比べて小さいですし，組み込みの基本を勉強できるということで，PIC16F84Aに挑戦しております．<br>
+            開発環境の構築は割愛させていただきます．参考にさせていただいたサイトを載せておきます．<br></p>
+            <a href="http://technologicaladvance.blog.fc2.com/blog-entry-72.html">・技術系のど根性←大変参考にさせてもらってますm(__)m</a>
+            <p class="note">今回は（眠いので）プログラムだけ挙げておきます．こちらも「技術系のど根性」さんのプログラムを参考につくっております．次回，プログラムの説明をしてみようと思います．内容はタイマー割り込みによる等間隔でのON/OFF制御です．</p>
+            <p class="code">
+            #include "pic.h"<br>
+            #pragma config CP = ON, PWRTE = ON, WDTE = OFF, FOSC = 0x3<br>
+
+void main(void){<br>
+    GIE = 1;<br>
+    T0IE = 0;<br>
+    T0CS = 0;<br>
+
+    //プリスケーラをTIMER0モジュール用にセット。PSA = 1 でWDT(ウォッチドックタイマ)用になる。<br>
+    PSA = 0;<br>
+
+    OPTION_REG |= 0x07; //ＣＰＵクロックを256分周  OPTION_REG = OPTION_REG|0x07 (or)と同等<br>
+    TMR0 = 0x00;<br>
+
+    //PORTA,PORTBをすべて出力に。<br>
+    TRISA = 0x00;<br>
+    TRISB = 0x00;<br>
+    T0IE = 1;<br>
+    while(1);<br>
+}<br>
+<br>
+void interrupt tc_int(void){<br>
+    if(T0IF){<br>
+        T0IF = 0;<br>
+        PORTAbits.RA1 ^=1;<br>
+        //PORTAbits.RA1 ^=1;<br>
+        //PORTA ^= 0xff;      //XOR(^）PORTA = PORTA^0xff<br>
+        PORTB ^= 0xff;      //XOR(^）<br>
+        return;<br>
+    }<br>
+}<br>
+            </p>
+           
+</body>

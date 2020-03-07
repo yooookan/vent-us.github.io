@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/*全体の調整*/
+
+body {
+	background:#2e2e35;
+    color:#fff;
+    font: 20px "ヒラギノ角ゴ Pro W3",'メイリオ', Meiryo,"ＭＳ Ｐゴシック", helvetica, arial, sans-serif;
+    *font-size: small;
+    *font: x-small;
+}
+a {
+	color: #fffbfb;	
+	text-decoration: none;
+	outline: 0;
+}
+a:hover {
+	color: #B0C4DE;
+	text-decoration: none;
+}
+/*全体の設定*/
+#container {
+	margin: 0 auto;
+	padding-bottom: 40px;
+	width: 720px;
+}
+#home {
+	position: absolute;
+	top: 30px;
+}
+h1 {
+	margin: 80px 0 40px;
+}
+p.copy {
+	margin: 0 0 5px;
+	color: #fff9f9;
+	font-size: 116%;
+	line-height: 1.6;
+}
+/*ナビゲーション*/
+ul#nav {
+	padding-bottom: 45px;
+	height: 15px;
+	border-bottom: 1px solid #999;
+}
+
+ul#nav li {
+	float: left;
+	margin-right: 40px;
+    padding: 3px;
+	color: #fff;
+	text-decoration: none;
+	/*font-size: 153.9%;*/
+	opacity: 1;
+}
+
+/*段落*/
+div.cont {
+	clear: both;
+	margin-top: 40px;
+}
+div.cont h3 {
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 100%;
+	font-family: Helvetica, Arial,"ヒラギノ角ゴ Pro W3",'メイリオ', serif;
+}
+div.cont li{
+    color: #b9b9b9;
+}
+p.note {
+	margin-bottom: 20px;
+	color: #b9b9b9;
+	line-height: 1.6;
+}
+p.code{
+    background-color: rgb(187, 206, 208);
+    color: #000;
+    font-size: 70%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+figure {
+    text-align: center; 
+}
+img{
+  width: 100%;   
+}
+
+iframe{
+    width: 100%;
+    
+    
+}
+/*ページトップボタン（非表示）*/
+/*
+#pagetopBtn {
+	position: fixed;
+	right: 50px;
+	bottom: -65px;
+	width: 130px;
+	height: 130px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+	-webkit-transition: 0.1s;
+	-moz-transition: 0.1s;
+	-ms-transition: 0.1s;
+	transition: 0.1s;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg); 
+}
+
+/*ページトップボタン（表示）*/
+/*#pagetopBtn.show {
+	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)";
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg); 
+}
+*/

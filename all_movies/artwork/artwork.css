@@ -1,0 +1,250 @@
+div{}
+
+body{
+    margin:0px;
+    background-color:rgba(46, 46, 53, 1.0);
+}
+
+/*** 全体の設定 ***/
+#page {
+    width: 1000px;
+    margin:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:50px;
+    margin-bottom:50px;
+    position: relative;
+}
+
+#back{
+    font: 20px "ヒラギノ角ゴ Pro W3",'メイリオ', Meiryo,"ＭＳ Ｐゴシック", helvetica, arial, sans-serif;
+    color:white;
+}
+
+#back :hover{
+    color:#b0c4de;
+}
+
+/* 主にレイアウトの設定
+---------------------------------------------------- */
+
+/*** セレクトボタン ***/
+a{
+    width: 50px;
+    font: 20px "ヒラギノ角ゴ Pro W3",'メイリオ', Meiryo,"ＭＳ Ｐゴシック", helvetica, arial, sans-serif;
+    text-decoration:none;
+    color:black;
+    
+}
+a:hover{
+    color:#b0c4de;
+}
+
+.smallcell{
+    padding: 5px;
+}
+.smallcell *{
+    width:200px;
+    height:200px;
+     /* 角を丸く */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+/* マウスを乗せたとき */
+.smallcell *:hover{
+    opacity:0.8;
+}
+
+
+
+/*** 動画コーナー ***/
+#contents{
+    width:1000px;
+    height:600px;
+    
+    background-color:rgba(128, 174, 248, 0.79);
+    border-radius:10px;
+}
+
+
+#contents_left{
+    width:700px;
+    height:600px;
+    float:left;
+}
+
+#movieTitle{
+    width:700px;
+    height:80px;
+}
+
+#TitleName{
+    position:relative;
+    height:60px;
+    width:680px;
+    font-size:48px;
+    text-align:center;
+    line-height:60px;
+    
+    top:20px;
+    left:20px;
+    border-top:solid 2px rgba(9, 102, 251, 0.79);
+    border-bottom:solid 2px rgba(9, 102, 251, 0.79);
+}
+
+#TitleName span{
+    display:block;
+    border-top:solid 2px rgba(207, 224, 252, 0.92);
+    border-bottom:solid 2px rgba(207, 224, 252, 0.92);
+    font-family:"Monotype Corsiva"
+}
+
+#categoly{
+    position:relative;
+    top:10px;
+    height:40px;
+    width:680px;
+    border-left:solid 6px blue;
+    left:20px;    
+}
+
+#categoly span{
+    display:block;
+    margin-left:10px;
+    font-size:20px;
+    line-height:40px;
+}
+
+#movieBox{
+    width: 680px;
+    height:460px;
+    
+    position:relative;
+    top:20px;
+    
+}
+
+#movie{
+    position:relative;
+    left:20px;
+    width: 680px;
+    height:440px;
+}
+
+
+#contents_right{
+    float:right;
+    width:300px;
+    height:600px;
+    
+}
+/*** 材料コーナー ***/
+
+
+#materialPage{
+    width:300px;
+    height:600px;
+}
+
+
+#materialTitle{
+    position:relative;
+    height:40px;
+    width:270px;
+    
+    margin-left:auto;
+    margin-right:auto;
+    top:20px;
+    
+    border-left:solid 6px blue;
+    font-size:20px;
+    line-height:40px;   
+}
+
+#materialTitle span{
+    display:block;
+    margin-left:10px;
+}
+
+
+#materialHead{
+    position:relative;
+    margin:0;
+    left:15px;
+    top:30px;
+    
+    overflow: hidden;
+    
+    width: 250px;
+    height: 40px;
+    background-color:rgba(255, 255, 255, 0);
+}
+
+#materialHead table{
+    width:100%;
+}
+
+#materialHead thead th{
+    height:30px;
+    width:60%;
+    font-size:20px;
+    
+    background-color:#2020a5;
+    color:white;
+    border:solid 3px rgba(255, 255, 255, 0);
+}
+
+#materialHead thead td{
+    height:30px;
+    width:40%;
+    font-size:20px;
+    
+    text-align:center;
+    font-weight:bold;
+    
+    background-color:#2020a5;
+    color:white;
+    border:solid 3px rgba(255, 255, 255, 0);
+}
+
+
+#material{
+    position:relative;
+    margin:0;
+    margin-left:auto;
+    margin-right:auto;
+    top:30px;
+/*    border:solid 2px rgba(9, 102, 251, 0.79);*/
+    
+    overflow: hidden;
+    
+    width: 270px;
+    height: 470px;
+    
+/*    background-color:rgba(255, 255, 255, 0);*/
+}
+
+#material table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:2px;
+    
+}
+
+#material tbody th{ 
+    padding:5px;
+    font-size:24px;
+    width:60%;
+    border:solid 3px rgba(255, 255, 255, 0);
+    background-color:rgb(195, 225, 247);
+}
+
+#material tbody td{
+    padding:5px;
+    width:40%;
+    text-align:center;
+    font-size:24px;
+    border:solid 3px rgba(255, 255, 255, 0);
+    background-color:white;
+}

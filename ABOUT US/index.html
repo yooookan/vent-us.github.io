@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>ABOUT US</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/vent_favicon.ico">
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			//スクロール、リサイズイベントに関数をbind
+			var timerID;
+			$(window).bind("scroll resize", function(event){
+				clearTimeout(timerID);
+				$(pagetopID).trigger("scrollStart");
+				timerID = setTimeout(function(){$(pagetopID).trigger("scrollStop")}, 500);
+			});
+			//スクロール開始、スクロール停止の処理
+			pagetopID = "#pagetopBtn";
+			$(pagetopID).bind("scrollStop scrollStart", function(event){
+				switch (event.type) {
+					case "scrollStop":
+						if($(window).scrollTop() >= 50){
+							$(this).addClass("show");
+						}
+						break;
+					case "scrollStart":
+						$(this).removeClass("show");
+						break;
+					default:
+						break;
+				}
+			});
+		});
+		//ページ内アニメーションスクロール
+		function pageScroll(obj){
+			if(!obj){
+				$.scrollTo({ top:0, left:0 }, 1000, {easing:"easeInOutQuart"});
+			} else {
+				$.scrollTo(obj, 1000, {easing:"easeInOutQuart"});
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="home"><a href="../index.html">HOME</a>
+		</div>
+		<h1><img src="images/logo.png" width="720" height="270" alt="FAMOUS FONTS LIBRARY" /></h1>
+		<p class="copy">ABOUT US</p>
+		<ul id="nav">
+			<li><a href="javascript:pageScroll('#cont0')">Vent</a></li>
+			<li><a href="javascript:pageScroll('#cont1')">Topics</a></li>
+			<li><a href="javascript:pageScroll('#cont2')">Why</a></li>
+			<li><a href="javascript:pageScroll('#cont3')">Join us</a></li>
+			<li><a href="javascript:pageScroll('#cont4')">Contact</a></li>
+		</ul>
+		<div id="cont0" class="cont">
+			<h2>Vent</h2>
+			<p class="note">Ventは「ものづくり」に関するちょっとした情報を発信するサイトです。<br>「つまみ食い」感覚で動画を眺めたいあなたに。</p>
+			<p class="note"></p>
+		</div>
+		<div id="cont1" class="cont">
+			<h2>Topics</h2>
+			<p class="note">大学の機械科で学ぶ私達が今一番知りたいこと・興味のあることばかりを取り上げてみました。</p>
+		</div>
+		<div id="cont2" class="cont">
+			<h2>Why</h2>
+			<p class="note">電子工作・機械・プログラミング・画像処理・インターネット・デザイン・・・こんな、テクノロジーの時代に生まれた私達。知りたいことが多すぎて、知らないことが多すぎて、困っちゃう。一人一人が独学で一個一個学ぶべきなんだろうけど、ぶっちゃけ「つまみ食い」したい。環境構築とか基礎知識とかぶっ飛ばしてとにかくやってみたい。<br>私達自身が持ってる、そんな欲求を満たすサイトができますように。</p>
+		</div>
+		<div id="cont3" class="cont">
+			<h2>Join us</h2>
+			<p class="note">このサイトが誰かの心に響いて、下の連絡先にメールしてくれますように。<br></p>
+		</div>
+		<div id="cont4" class="cont">
+			<h2>Contact</h2>
+			<p class="note">vent1310@gmail.com</p>
+		</div>
+	</div>
+	<!--<div id="pagetopBtn"><a href="javascript:pageScroll()"><img src="images/pagetop.png" width="130" height="65" alt="PAGE TOP" /></a></div>
+	-->
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        
+        <link href="jscrollpane.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="artwork.css" type="text/css">
+        <link rel="shortcut icon" href="vent_favicon.ico">
+                
+        <script type="text/javascript" src="jquery-1.10.2.min.js"></script>        
+        <script src="jquery.mousewheel.js"></script>
+        <script src="jscrollpane.min.js"></script>
+        <script src="artwork.js"></script>
+        <title>Artwork</title>
+    
+    </head>
+
+    <body>
+    <div id="page"> <!--全体のページ-->
+    
+    <!-- セレクトボタン -->
+<!--
+    <table id="main">
+        <tr id="btn">
+            <td class="smallcell" id="logo"><a href="#"><img src="img/logo.png"></a></td>
+            <td class="smallcell" id="back"><a href="#"><img src="img/about.png"></a></td>
+            <td class="smallcell" id="allmovie"><a href="#"><img src="img/movie.png"></a></td>
+        </tr>
+    </table>
+-->
+    <!-- #selectbtn終了-->
+    <a id="back" href="../all_movies.html" ><p id="back">BACK</p></a><br>
+    <!-- 動画コーナー -->
+    
+    <div id="contents">
+    
+        <div id="contents_left">
+        
+            <div id="movieTitle">    <!--動画タイトル-->
+                <div id="TitleName"><span>ストアアプリを作ってみる</span></div>
+            </div>
+            <div id="categoly">
+                <span>初めてのストアアプリ - 3</span>
+                
+            </div>
+            
+            <div id="movieBox">    <!--動画-->
+                <iframe id="movie" width="640" height="420" src="//www.youtube.com/embed/vzWIiwU6KS0?feature=player_detailpage" frameborder="0" allowfullscreen　rel="0"></iframe>
+            </div>
+        </div>    <!-- 動画コーナー終了 -->
+        
+        <div id="contents_right">
+            <div id="materialPage">
+                
+                <div id="materialTitle">
+                    <span>必要なもの</span>
+                </div>    <!--材料タイトル-->
+            
+                <div id="materialHead">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ソフト</th>
+                                <td>値段</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                
+                <div id="material" onclick="clockHander();">    <!--材料-->
+                
+                    <table>
+                        
+                        <tbody>
+                            <tr>
+                                <th>Visual Studio2013</th>
+                                <td>無料(Express)</td>
+                            </tr>
+                            <tr>
+                                <th>注)使用OS</th>
+                                <td>Windows8.1</td>
+                            </tr>
+                           
+                            
+                        </tbody>
+                        
+                    </table>
+
+                </div>　 <!-- #material終了-->
+            </div>    <!--#materialPage-->
+        </div>
+        
+    
+    </div>    
+                    
+    </div>    <!-- #page終了-->
+    
+    
+    
+    </body>
+</html>

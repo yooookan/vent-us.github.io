@@ -1,0 +1,59 @@
+﻿/*** 全体の設定 ***/
+html,body{
+    height:100%;
+    width:100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:rgba(46, 46, 53, 1.0);
+}
+
+#page {
+    margin:0;
+}
+
+/* 主にレイアウトの設定
+---------------------------------------------------- */
+/*** メインコンテンツ ***/
+#main{
+    margin: 0 auto;
+    position: relative;
+}
+
+/*** 大きなセル ***/
+.bigcell{
+    padding: 0.5%;
+
+}
+.bigcell *{
+    width: 96%;
+    /* 角を丸く */
+    -webkit-border-radius: 1%;
+    -moz-border-radius: 1%;
+    border-radius: 1%;
+}
+/* マウスを乗せたとき */
+.bigcell *:hover{
+/*    opacity:0.8;*/
+}
+
+/*** 小さなセル ***/
+.smallcell{
+    padding: 1%;
+}
+.smallcell *{
+    width:93%;
+     /* 角を丸く */
+    -webkit-border-radius: 1%;
+    -moz-border-radius: 1%;
+    border-radius: 1%;
+}
+/* マウスを乗せたとき */
+.smallcell *:hover{
+/*    opacity:0.8;*/
+}
+

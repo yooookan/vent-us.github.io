@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>ものづくり全般に関するブログ</title>
+     <!--検索エンジンで表示されるサイトの説明-->
+    <meta name="description" content="「ものづくり」に関するちょっとした情報を発信するブログです。「つまみ食い」感覚で動画を眺めたいあなたに。私達が今一番知りたいこと・興味のあることばかりを取り上げてみました。" />
+    <!--検索エンジンで使われるキーワード-->
+    <meta name="keywords" content="ものづくり,プログラミング,マイコン,電子回路" />
+    <meta name="author" content="ynu" />
+    <!--スマホ対策-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
+	<link href="../css/blog_css.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>  
+     <h3>ACアダプタを使った安定化電源の製作①　2014/12/15</h3>
+            <p class="note">
+            毎回，回路を動かすのに電池を使うのはもったいないなぁ＆めんどくさいと感じていたので安定化電源もどきを作ろうと思います．（買うと半端なく高いので）<br>
+            使うのはこの19.5V ACアダプター．プラグが秋月で購入したプラグ変換キットと一致してなかったので，プラグを切り落としてハンダで付け直しています．</p>
+            <figure>
+                <img src="../img/20141215/ACアダプタ.jpg" alt="ACアダプタ"><figcaption>ACアダプタ</figcaption>
+                <img src="../img/20141215/ACアダプタ2.jpg" alt="はんだ付けしてます"><figcaption>ハンダしてます</figcaption>
+            </figure>
+            <p class="note">
+            欲しい電圧値としては12Vと5V．ほんとはDC-DCコンバータを使って降圧回路を作る予定でしたが，ダイオードを買い忘れる痛恨のミス...今回はたまたま手元にあった12V1A出力の三端子レギュレータを使ってみたいと思います．<br><br>
+            三端子レギュレーターを用いた回路図はこんな感じです．非常にシンプルですね．</p>
+            <figure>
+                <img src="../img/20141215/回路図.jpg" alt="回路図"><figcaption>引用元：http://akizukidenshi.com/download/LM2940CT-12.pdf</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/20141215/作成回路.jpg" alt="回路図"><figcaption>完成回路</figcaption>
+            </figure>
+            <p class="note">
+            コンデンサーは主に変動補償なのでしょう．（勉強中で詳しくないです）<br>
+            三端子レギュレーターはいらない電力を熱に変換することで降圧しているので，熱管理は気を付ける必要があります．今回は<br>
+                19.5V － 12V = 7.5V<br>
+                7.5V × 1A = 7.5W<br>
+            を熱として放出する必要があるのでそれを見合ったフィンをくっつける必要があります．
+            今回はもってなかったので実験的にやっちゃいましたが，しっかりと計算しましょう．
+            下に示すように，きちんと降圧できていることがわかります．やったね
+            </p>
+            <figure>
+                <img src="../img/20141215/12V.jpg" alt="回路図"><figcaption>19.5Vから12Vへ</figcaption>
+            </figure>
+           
+</body>

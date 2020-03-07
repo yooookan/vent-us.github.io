@@ -1,0 +1,102 @@
+/*** 全体の設定 ***/
+#page {
+    width: 1200px;
+    margin:0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+}
+
+/* 主にレイアウトの設定
+---------------------------------------------------- */
+/*** セレクトボタン ***/
+#selectbtn{
+    width: 1200px;    
+    height: 40px;
+}
+#selectbtn li{
+    width: 200px;
+    float:left;
+    overflow:hidden;
+    border:1px solid #06ff36;
+    border-right:1px solid #666;
+    background-color: #5f4;
+    line-height:2.0;
+    text-align:center
+}
+
+/*** 動画コーナー ***/
+#movie{
+/*
+    float: left;
+    width: 630px;
+*/
+    position: relative;
+/*
+margin-top: 1.2em;
+margin-bottom: 1.2em;
+*/
+padding-bottom: 415px;
+padding-left:740px;
+/*padding-top: 69px;*/
+overflow: hidden;
+    float:left;
+
+}
+
+#movie iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 740Px;
+height: 415px;
+}
+/* 動画タイトル */
+#movtitle{
+    text-align:left;
+    height: 40px;
+    text-decoration:none;
+}
+
+/*** 材料コーナー ***/
+#material{
+    
+    position:relative;
+    overflow: scroll;
+    overflow-x:hidden;
+    width: 300px;
+    height: 415px;
+    /* 枠線 */
+    border-style: solid; 
+    border-width: 1px;
+}
+
+#material ul{
+    margin:0 auto;
+    /* 行間 */
+    line-height:normal;
+    
+
+}
+
+#material img{
+    width:50px;
+    height:50px;
+     /* 角を丸く */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+/* 主に文字表示の設定
+---------------------------------------------------- */
+/* 動画タイトル */
+#movtitle{
+    font-size:30px;
+    /* アンダーライン */
+    text-decoration:underline;
+}
